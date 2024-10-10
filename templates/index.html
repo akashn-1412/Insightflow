@@ -1,0 +1,425 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+   body {
+            font-family: 'Inter', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gradient-to-r from-gray-700 via-gray-900 to-black text-gray-300">
+  <div class="flex">
+   <!-- Sidebar -->
+   <div class="w-64 bg-gray-800 h-screen p-4 flex flex-col justify-between">
+    <div>
+     <div class="flex items-center space-x-4 p-2 mb-5">
+      <img alt="User avatar" class="w-10 h-10 rounded-full" height="50" src="https://storage.googleapis.com/a1aa/image/KZXxXAjQCC7bAttN6ZGx3eLsXOpItvlOkRcith3RfrVJ5QlTA.jpg" width="50"/>
+      <div>
+       <h4 class="font-semibold text-lg text-white">
+        Henry Klein
+       </h4>
+       <span class="text-sm text-gray-400">
+        Gold Member
+       </span>
+      </div>
+     </div>
+     <nav>
+      <a class="flex items-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md transition duration-200 group" href="#">
+       <i class="fas fa-tachometer-alt w-6 text-yellow-500 group-hover:animate-bounce">
+       </i>
+       <span class="ml-3">
+        Dashboard
+       </span>
+      </a>
+      <a class="flex items-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md transition duration-200 group" href="#">
+       <i class="fas fa-chart-line w-6 text-orange-500 group-hover:animate-bounce">
+       </i>
+       <span class="ml-3">
+        Sales Analysis
+       </span>
+      </a>
+      <a class="flex items-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md transition duration-200 group" href="#">
+       <i class="fas fa-comments w-6 text-pink-500 group-hover:animate-bounce">
+       </i>
+       <span class="ml-3">
+        AI Conversation
+       </span>
+      </a>
+      <a class="flex items-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md transition duration-200 group" href="#">
+       <i class="fas fa-briefcase w-6 text-green-500 group-hover:animate-bounce">
+       </i>
+       <span class="ml-3">
+        Business Strategy
+       </span>
+      </a>
+      <a class="flex items-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md transition duration-200 group" href="#">
+       <i class="fas fa-calculator w-6 text-blue-500 group-hover:animate-bounce">
+       </i>
+       <span class="ml-3">
+        ROI Calculator
+       </span>
+      </a>
+      <a class="flex items-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md transition duration-200 group" href="#">
+       <i class="fas fa-icons w-6 text-purple-500 group-hover:animate-bounce">
+       </i>
+       <span class="ml-3">
+        Icon Generator
+       </span>
+      </a>
+      <a class="flex items-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md transition duration-200 group" href="#">
+       <i class="fas fa-user w-6 text-pink-500 group-hover:animate-bounce">
+       </i>
+       <span class="ml-3">
+        User Pages
+       </span>
+      </a>
+      <a class="flex items-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md transition duration-200 group" href="#">
+       <i class="fas fa-exclamation-triangle w-6 text-yellow-500 group-hover:animate-bounce">
+       </i>
+       <span class="ml-3">
+        Error Pages
+       </span>
+      </a>
+      <a class="flex items-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md transition duration-200 group" href="#">
+       <i class="fas fa-book w-6 text-green-500 group-hover:animate-bounce">
+       </i>
+       <span class="ml-3">
+        Documentation
+       </span>
+      </a>
+     </nav>
+    </div>
+    <div class="mt-6">
+     <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition duration-200">
+      Upgrade to Pro
+     </button>
+    </div>
+   </div>
+   <!-- Main Content -->
+   <div class="flex-1 p-6">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-6">
+     <h1 class="text-3xl font-semibold text-white">
+      Dashboard
+     </h1>
+     <div class="flex items-center space-x-4">
+      <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition duration-200">
+       Notifications
+      </button>
+      <button class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md transition duration-200">
+       Settings
+      </button>
+     </div>
+    </div>
+    <!-- Features -->
+    <div class="grid grid-cols-3 gap-6 mb-6">
+     <div class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:-translate-y-1 hover:scale-105">
+      <div class="flex items-center">
+       <i class="fas fa-tachometer-alt w-10 h-10 text-white mr-3">
+       </i>
+       <div>
+        <h4 class="font-semibold text-lg">
+         Dashboard
+        </h4>
+        <p class="text-sm">
+         Overview of all metrics
+        </p>
+       </div>
+      </div>
+      <button class="mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-md">
+       View
+      </button>
+     </div>
+     <div class="bg-gradient-to-r from-green-500 to-teal-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:-translate-y-1 hover:scale-105">
+      <div class="flex items-center">
+       <i class="fas fa-chart-line w-10 h-10 text-white mr-3">
+       </i>
+       <div>
+        <h4 class="font-semibold text-lg">
+         Sales Analysis
+        </h4>
+        <p class="text-sm">
+         Detailed sales metrics
+        </p>
+       </div>
+      </div>
+      <button class="mt-4 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md">
+       View
+      </button>
+     </div>
+     <div class="bg-gradient-to-r from-pink-500 to-red-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:-translate-y-1 hover:scale-105">
+      <div class="flex items-center">
+       <i class="fas fa-comments w-10 h-10 text-white mr-3">
+       </i>
+       <div>
+        <h4 class="font-semibold text-lg">
+         AI Conversation
+        </h4>
+        <p class="text-sm">
+         Chat with AI
+        </p>
+       </div>
+      </div>
+      <button class="mt-4 bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded-md">
+       View
+      </button>
+     </div>
+     <div class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:-translate-y-1 hover:scale-105">
+      <div class="flex items-center">
+       <i class="fas fa-briefcase w-10 h-10 text-white mr-3">
+       </i>
+       <div>
+        <h4 class="font-semibold text-lg">
+         Business Strategy
+        </h4>
+        <p class="text-sm">
+         Plan your business
+        </p>
+       </div>
+      </div>
+      <button class="mt-4 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-md">
+       View
+      </button>
+     </div>
+     <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:-translate-y-1 hover:scale-105">
+      <div class="flex items-center">
+       <i class="fas fa-calculator w-10 h-10 text-white mr-3">
+       </i>
+       <div>
+        <h4 class="font-semibold text-lg">
+         ROI Calculator
+        </h4>
+        <p class="text-sm">
+         Calculate your ROI
+        </p>
+       </div>
+      </div>
+      <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md">
+       View
+      </button>
+     </div>
+     <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-lg shadow-lg transform transition-transform hover:-translate-y-1 hover:scale-105">
+      <div class="flex items-center">
+       <i class="fas fa-icons w-10 h-10 text-white mr-3">
+       </i>
+       <div>
+        <h4 class="font-semibold text-lg">
+         Icon Generator
+        </h4>
+        <p class="text-sm">
+         Generate icons
+        </p>
+       </div>
+      </div>
+      <button class="mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-md">
+       View
+      </button>
+     </div>
+    </div>
+    <!-- Stats -->
+    <div class="grid grid-cols-4 gap-6 mb-6">
+     <div class="bg-gray-800 p-4 rounded-md shadow-lg transform transition-transform hover:-translate-y-1 hover:scale-105">
+      <h4 class="text-lg font-semibold text-white">
+       $12.34
+       <span class="text-green-500">
+        +3.5%
+       </span>
+      </h4>
+      <p class="text-gray-400">
+       Potential growth
+      </p>
+     </div>
+     <div class="bg-gray-800 p-4 rounded-md shadow-lg transform transition-transform hover:-translate-y-1 hover:scale-105">
+      <h4 class="text-lg font-semibold text-white">
+       $17.34
+       <span class="text-green-500">
+        +11%
+       </span>
+      </h4>
+      <p class="text-gray-400">
+       Revenue current
+      </p>
+     </div>
+     <div class="bg-gray-800 p-4 rounded-md shadow-lg transform transition-transform hover:-translate-y-1 hover:scale-105">
+      <h4 class="text-lg font-semibold text-white">
+       $12.34
+       <span class="text-red-500">
+        -2.4%
+       </span>
+      </h4>
+      <p class="text-gray-400">
+       Daily Income
+      </p>
+     </div>
+     <div class="bg-gray-800 p-4 rounded-md shadow-lg transform transition-transform hover:-translate-y-1 hover:scale-105">
+      <h4 class="text-lg font-semibold text-white">
+       $31.53
+       <span class="text-green-500">
+        +3.5%
+       </span>
+      </h4>
+      <p class="text-gray-400">
+       Expense current
+      </p>
+     </div>
+    </div>
+    <!-- Business Insights -->
+    <div class="bg-gray-800 p-6 rounded-md shadow-lg mb-6">
+     <h4 class="text-lg font-semibold text-white mb-4">
+      Business Insights
+     </h4>
+     <ul class="space-y-4">
+      <li class="flex items-center justify-between">
+       <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center">
+         <i class="fas fa-chart-pie text-white">
+         </i>
+        </div>
+        <div>
+         <h5 class="text-white font-semibold">
+          Market Trends
+         </h5>
+         <p class="text-gray-400 text-sm">
+          Latest market trends and analysis
+         </p>
+        </div>
+       </div>
+       <span class="text-gray-400 text-sm">
+        Updated 1 hour ago
+       </span>
+      </li>
+      <li class="flex items-center justify-between">
+       <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
+         <i class="fas fa-bullseye text-white">
+         </i>
+        </div>
+        <div>
+         <h5 class="text-white font-semibold">
+          Target Audience
+         </h5>
+         <p class="text-gray-400 text-sm">
+          Insights on your target audience
+         </p>
+        </div>
+       </div>
+       <span class="text-gray-400 text-sm">
+        Updated 2 hours ago
+       </span>
+      </li>
+      <li class="flex items-center justify-between">
+       <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+         <i class="fas fa-handshake text-white">
+         </i>
+        </div>
+        <div>
+         <h5 class="text-white font-semibold">
+          Partnership Opportunities
+         </h5>
+         <p class="text-gray-400 text-sm">
+          Explore new partnership opportunities
+         </p>
+        </div>
+       </div>
+       <span class="text-gray-400 text-sm">
+        Updated 3 hours ago
+       </span>
+      </li>
+     </ul>
+    </div>
+    <!-- Interactive Business Roadmap -->
+    <div class="bg-gray-800 p-6 rounded-md shadow-lg mb-6">
+     <h4 class="text-lg font-semibold text-white mb-4">
+      Interactive Business Roadmap
+     </h4>
+     <div class="space-y-4">
+      <div class="bg-gray-700 p-4 rounded-md">
+       <h5 class="text-white font-semibold">
+        Milestones
+       </h5>
+       <p class="text-gray-400 text-sm">
+        Key achievements or stages in a project or strategy, helping clients track progress and stay on course.
+       </p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded-md">
+       <h5 class="text-white font-semibold">
+        KPIs
+       </h5>
+       <p class="text-gray-400 text-sm">
+        Metrics that measure performance against goals, such as revenue growth, market expansion, or customer satisfaction.
+       </p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded-md">
+       <h5 class="text-white font-semibold">
+        Real-Time Interaction
+       </h5>
+       <p class="text-gray-400 text-sm">
+        Clients can interact with the roadmap by updating milestones, viewing progress reports, and forecasting future trends, all in real-time.
+       </p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded-md">
+       <h5 class="text-white font-semibold">
+        Visualization
+       </h5>
+       <p class="text-gray-400 text-sm">
+        The visualization makes complex strategies easy to understand and manage.
+       </p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded-md">
+       <canvas id="roadmapChart" width="400" height="200">
+       </canvas>
+      </div>
+     </div>
+    </div>
+    <!-- AI-Driven Features -->
+    <div class="bg-gray-800 p-6 rounded-md shadow-lg mb-6">
+     <h4 class="text-lg font-semibold text-white mb-4">
+      AI-Driven Features
+     </h4>
+     <div class="space-y-4">
+      <div class="bg-gray-700 p-4 rounded-md">
+       <h5 class="text-white font-semibold">
+        AI-Powered Business Insights
+       </h5>
+       <p class="text-gray-400 text-sm">
+        Use AI to analyze client data and provide predictive insights, such as sales forecasts, customer behavior trends, or personalized strategy recommendations.
+       </p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded-md">
+       <h5 class="text-white font-semibold">
+        Automated Content Optimization
+       </h5>
+       <p class="text-gray-400 text-sm">
+        Implement AI to enhance email marketing and social media content, analyzing engagement metrics to optimize messaging for higher impact.
+       </p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded-md">
+       <h5 class="text-white font-semibold">
+        Competitive Landscape Analysis
+       </h5>
+       <p class="text-gray-400 text-sm">
+        AI-driven tools that scan industry trends, competitor strategies, and market changes to inform clients of new opportunities and threats in real time.
+       </p>
+      </div>
+     </div>
+    </div>
+    <!-- Line Chart -->
+    <div class="bg-gray-800 p-6 rounded-md shadow-lg mb-6">
+     <h4 class="text-lg font-semibold text-white mb-4">
+      Sales Growth Over Time
+     </h4>
+     <div class="bg-gray-700 p-4 rounded-md">
+      <canvas id="lineChart" width="400" height="200">
+      </canvas>
+     </div>
+   
